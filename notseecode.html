@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+此方法对firefox不成立
+-->
+
+<html>
+<head>
+    <title>保护网页源代码</title>
+    <script>
+    function clear()
+    {
+        Source = document.body.innerHTML;
+        document.open();
+        document.write("代码已经被屏蔽了");
+        document.close();
+        document.title="donot to see the code";
+        document.body.innerHTML=Source;
+    }
+    </script>
+</head>
+<body onload=clear()>
+<p>have a test</p>
+</body>
+</html>
