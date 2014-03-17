@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>倒计时加载页面</title>
+    <meta http-equiv='refresh' content="11;url=http://www.google.com">
+    <script language="JavaScript">
+    //获取当前时间
+    startday=new Date();
+    clockStart = startday.getTime();
+
+    function initStopwatch(){
+        var myTime = new Date();
+        var timeNow = myTime.getTime();
+        var timeDiff = timeNow-clockStart;    //获取间隔时间
+        this.diffSecs = timeDiff/1000;  //时间以毫秒为单位
+        return(this.diffSecs);
+    }
+
+    function getSecs(){
+        var mySecs = initStopwatch();
+        var mySecs1 = " "+mySecs;
+        //以倒计时方式显示时间
+        mySecs1 = 10-document.getElementById(mySecs1.substring(0,mySecs1.indexOf(".")))+"秒";
+        document.form1.timespent.value = mySecs1;
+        window.setTimeout('getSecs()',1000);
+    }
+    </script>
+</head>
+
+<body onLoad="window.setTimeout('getSecs()',1)">
+<!--倒计时，并自动加载页面
+-->
+<center>
+10秒后加载页面
+<form name="form1">
+<input size=9 name="timespent">
+</form>
+</center>
+</body>
+</html>

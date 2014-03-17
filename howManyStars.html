@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+用于网站上用户评价内容的评星效果
+
+以下代码需要兼容firefox
+-->
+
+<html>
+<head>
+<title>评星级</title>
+<script>
+    var starNum = 0;
+    function chgStar()
+    {
+        var evt = (evt) ? evt : ((window.event) ? window.event : null);
+        //var obj = evt.srcElement ? evt.srcElement:evt.target;
+        //starNum = evt.target.id.slice(-1);    //从第一个到最后一个
+        for (var i=1;i<=6;i++){ 
+            if(document.all){
+            document.getElementById("id"+i).innerText="☆";        //显示的星星
+            } else {
+            document.getElementById("id"+i).textContent ="☆";
+            }
+        }
+        for (var j=1;j<=starNum;j++) {
+            if(document.all){
+            document.getElementById("id"+j).innerText="★";   //选中的星星
+            }else{
+            document.getElementById("id"+j).textContent="★";
+            }
+        }
+    }
+
+    function getStar()
+    {
+        alert ("用户的评价是"+starNum+"颗星星！");
+    }
+
+    for (var i=1;i<=6;i++)
+    {
+        //动态输出span，并设置span的样式和事件
+        document.write('<span id="id'+i+'" onclick="chgStar()" style="cursor:hand;">☆</span>');
+    }
+
+    document.write('<br/><br/><button onclick="getStar()">评级分数</button>');      //动态输出按钮，包括事件
+
+</script>
+</head>
+<body>
+</body>
+</html>

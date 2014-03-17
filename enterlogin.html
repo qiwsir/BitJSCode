@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+</html>
+<head>
+    <title>Check score</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+    //    function keyLogin(){
+    //        if (event.keyCode == 13){   //按回车键的键值是13
+    //            document.getElementById("input1").click();  //调用登录按钮的登录事件
+    //        }
+    //    }
+
+    $(document).keydown(function(e){    //jquery代码
+        if(e.keyCode == 13) {
+            //$('#login').submit();
+            $('#login').click();
+        }
+    });
+    </script>
+</head>
+<!--非jquery用下面的
+<body onkeydown="keyLogin()">
+-->
+<!--
+按回车键，即可登录
+-->
+<!--非JQUERY用
+<input id="input1" value="登录" type="button" onclick="alert('调用成功。');">
+-->
+<input id="login" value="登录" type="button" onclick="alert('调用成功。');">
+</body>
+</html>
