@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>select different option,then differ button</title>
+    <script>
+        function butSelect(){
+            var selVal = document.getElementById("sel").value;
+
+            if (selVal == "1"){
+                document.getElementById("td").innerHTML = "<input type='button' value='BUTTON-1' onclick='btnc1()'>";
+            }else if(selVal == '2'){
+                document.getElementById("td").innerHTML = "<input type='button' value='BUTTON-2' onclick='btnc2()'>";
+            }else{
+                document.getElementById("td").innerHTML = "";
+            }
+        }
+
+        function btnc1(){
+            alert("please click BUTTON-1");
+        }
+
+        function btnc2(){
+            alert("plaese click BUTTON-2");
+            }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <select onchang="butSelect();" id="sel">
+                    <option value="">select</option>
+                    <option value="1">but1</option>
+                    <option value="2">but2</option>
+                </select>
+            </td>
+            <td id="td"></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script language="javascript">
+            function addClick(obj){
+                obj.onclick=function(){
+                    alert('add a object,it is ok.');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input id='button2' type='button' value='TEST'>
+        <br/>
+        <input id='button1' type='button' value='add an object for pre button' onclick='addClick(button2)'>
+    </body>
+</html>
