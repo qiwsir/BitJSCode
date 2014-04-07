@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>kill space of head and end in string</title>
+    <script>
+        function killSpace(txtvalue){
+            //判断文本内容内容是否为空，判断第一个字符是否为空格
+            if ((txtvalue.value.length>0) && (txtvalue.value.charAt(0) == " ")){
+                txtvalue.value = txtvalue.value.substring(1,txtvalue.value.length);    //从第二位开始
+            }
+
+            //判断文本的长度
+            if ((txtvalue.value.length>0) && (txtvalue.value.charAt(txtvalue.value.length-1)==" ")){
+                txtvalue.value = txtvalue.value.substring(0,txtvalue.value.length-1);    //去掉最后一位
+            }
+        }
+    </script>
+    </head>
+    <body>
+    <input type="text" name="txt1" value=" space ">
+    <input type="button" value="kill space" name="btn1" onclick="killSpace(txt1)">
+    </body>
+</html>
