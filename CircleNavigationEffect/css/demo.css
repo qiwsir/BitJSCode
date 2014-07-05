@@ -1,0 +1,107 @@
+@import url('reset.css');
+
+/* General Demo Style */
+body{
+	background:#edeae2 url(../images/cardboard.jpg) repeat top left;
+	color:#000;
+	font-family: 'PT Sans Narrow', 'Arial Narrow', Arial, sans-serif;
+	font-size:13px;
+	min-height:800px;
+}
+a{
+	color:#000;
+	text-decoration:none;
+}
+.clr{
+	clear:both;
+}
+.wrapper{
+	width:90%;
+	margin:30px auto;
+}
+.wrapper p{
+    font-family:Georgia, serif;
+    font-style:italic;
+    padding:30px 0px 10px 0px;
+    text-align:center;
+}
+h1{
+	margin:20px 20px 10px 20px;
+	font-size:42px;
+	color:#202020;
+	font-family:'Rochester',Georgia, serif;
+	text-align:left;
+	font-weight:400;
+	text-shadow:1px 1px 1px #fff;
+    text-align:center;
+}
+h1 span{
+	font-size:22px;
+	display:block;
+	color:#8b6a12;
+	padding-top:10px;
+}
+/* Header Style */
+.header{
+	height:25px;
+	line-height:24px;
+	font-size:13px;
+	background:#000;
+	opacity:0.9;
+	text-transform:uppercase;
+	z-index:4;
+	-moz-box-shadow:1px 0px 2px #000;
+	-webkit-box-shadow:1px 0px 2px #000;
+	box-shadow:1px 0px 2px #000;
+}
+.header a{
+	padding:5px 10px;
+	letter-spacing:1px;
+	color:#ddd;
+	text-align:right;
+}
+.header a:hover{
+	color:#fff;
+}
+.header a span{
+	font-weight:bold;
+}
+.header span.right_ab{
+	position:absolute;
+	right:4px;
+}
+.more{
+    font-family: Georgia, serif;
+	position:relative;
+    font-style:italic;
+	clear:both;
+}
+.more ul{
+	display:block;
+	height:32px;
+	text-align:center;
+}
+.more ul li{
+	display:inline;
+	padding:2px;
+}
+.more ul li.selected a,
+.more ul li.selected a:hover{
+	background:#9a8448;
+	color:#fff;
+	text-shadow:none;
+}
+.more ul li a{
+	text-shadow:1px 1px 1px #fff;
+	color:#555;
+	background:#fbf9f5;
+	padding:3px 6px;
+	-moz-box-shadow:1px 1px 2px #aaa;
+	-webkit-box-shadow:1px 1px 2px #aaa;
+	box-shadow:1px 1px 2px #aaa;
+}
+.more ul li a:hover{
+	background:#c2a967;
+	color:#fff;
+	text-shadow:none;
+}

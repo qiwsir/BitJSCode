@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Circle Navigation Effect with CSS3</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Circle Navigation Effect with CSS3" />
+        <meta name="keywords" content="css3, circle, hover, navigation, effect, preview, thumbnails, images, slider, jquery, previous, next" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Rochester' rel='stylesheet' type='text/css' />
+        <noscript>
+            <style>
+                .cn-images img{position: relative;display: block;border-bottom: 5px solid #d0ab47;} 
+                .cn-slideshow{height: auto;}
+            </style>
+        </noscript>
+		<script id="barTmpl" type="text/x-jquery-tmpl">
+            <div class="cn-bar">
+                <div class="cn-nav">
+					<a href="#" class="cn-nav-prev">
+                        <span>Previous</span>
+						<div style="background-image:url(${prevSource});"></div> 
+					</a>
+					<a href="#" class="cn-nav-next">
+                        <span>Next</span>
+						<div style="background-image:url(${nextSource});"></div>
+					</a>
+                </div><!-- cn-nav -->
+                <div class="cn-nav-content">
+                    <div class="cn-nav-content-prev">
+                        <span>Previous image</span>
+                        <h3>${prevTitle}</h3>
+                    </div>
+                    <div class="cn-nav-content-current">
+                        <span>Currently viewing</span>
+                        <h2>${currentTitle}</h2>
+                    </div>
+                    <div class="cn-nav-content-next">
+                        <span>Next image</span>
+                        <h3>${nextTitle}</h3>
+                    </div>
+                </div><!-- cn-nav-content -->
+            </div><!-- cn-bar -->
+		</script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <a href="http://tympanus.net/Tutorials/DraggableImageBoxesGrid/"><span>&laquo; Previous Demo: </span>Draggable Image Boxes Grid</a>
+                <span class="right_ab">
+                    <a href="http://www.behance.net/AndrewLili" target="_blank">Images by Andrey & Lili</a>
+                    <a href="http://creativecommons.org/licenses/by-nc/3.0/" target="_blank">CC BY-NC 3.0</a>
+                    <a href="http://tympanus.net/codrops/2011/10/10/circle-navigation-effect-with-css3/"><strong>Back to the Codrops Article</strong></a>
+                </span>
+            </div>
+            <h1>Circle Navigation Effect <span>Bubble-like thumbnail preview for your navigation with CSS3</span></h1>
+            <div class="wrapper">
+                <div id="cn-slideshow" class="cn-slideshow">
+                    <div class="cn-images">
+                        <img src="images/large/1.jpg" alt="image01" title="Beautiful Scenery 1" data-thumb="images/thumbs/1.jpg" style="display:block;"/>
+                        <img src="images/large/2.jpg" alt="image02" title="Beautiful Scenery 2" data-thumb="images/thumbs/2.jpg"/>
+                        <img src="images/large/3.jpg" alt="image03" title="Beautiful Scenery 3" data-thumb="images/thumbs/3.jpg"/>
+                        <img src="images/large/4.jpg" alt="image04" title="Beautiful Scenery 4" data-thumb="images/thumbs/4.jpg"/>
+                    </div><!-- cn-images -->
+                </div><!-- cn-slideshow -->
+                <p>Hover over the arrows to see the effect.</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="js/jquery.slideshow.js"></script>
+        <script type="text/javascript">
+            $(function() {
+				$('#cn-slideshow').slideshow();
+            });
+        </script>
+    </body>
+</html>	
