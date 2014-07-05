@@ -1,0 +1,412 @@
+.fc-wrapper {
+	width: 300px;
+	height: 300px;
+	position: relative;
+	margin: 30px auto 0;
+	background: #846aa7 url(../images/paper.png) repeat center center;
+	border-radius: 50%;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Handle parts*/ 
+
+.fc-handle {
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	width: 80px;
+	height: 30px;
+	margin-top: -15px;
+	background: #775b9d;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.fc-handle-out {
+	right: -65px;
+	width: 65px;
+}
+
+.fc-handle-in {
+	right: 80px;
+}
+
+.fc-handle div {
+	position: absolute;
+	height: 0px;
+	width: 80px;
+	top: 30px;
+	content: '';
+	opacity: 0.3;
+}
+
+.fc-handle-in div {
+	background: -moz-linear-gradient(75deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 73%, rgba(0,0,0,0.65) 100%);
+	background: -webkit-linear-gradient(75deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 73%,rgba(0,0,0,0.65) 100%);
+	background: -o-linear-gradient(75deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 73%,rgba(0,0,0,0.65) 100%);
+	background: -ms-linear-gradient(75deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 73%,rgba(0,0,0,0.65) 100%);
+	background: linear-gradient(75deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 73%,rgba(0,0,0,0.65) 100%);
+}
+
+.fc-handle-out div {
+	background: -moz-linear-gradient(-75deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 27%, rgba(0,0,0,0) 100%);
+	background: -webkit-linear-gradient(-75deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 27%,rgba(0,0,0,0) 100%);
+	background: -o-linear-gradient(-75deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 27%,rgba(0,0,0,0) 100%);
+	background: -ms-linear-gradient(-75deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 27%,rgba(0,0,0,0) 100%);
+	background: linear-gradient(170deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 27%,rgba(0,0,0,0) 100%);
+}
+
+.fc-handle-out::after {
+	position: absolute;
+	right: 0px;
+	width: 4px;
+	height: 31px;
+	content: '';
+	background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%);
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%);
+	background: -o-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%);
+	background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%);
+	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%);
+}
+
+.fc-handle-pull {
+	right: auto;
+	left: 100%;
+	margin-left: 5px;
+	width: 30px;
+	box-shadow: 
+		1px 0 1px rgba(0,0,0,0.1), 
+		inset 3px 0 2px rgba(0,0,0,0.2);
+	cursor: pointer;
+}
+
+.fc-handle-pull::after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 30px;
+	height: 100%;
+	background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 69%, rgba(0,0,0,0.08) 100%);
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 69%,rgba(0,0,0,0.08) 100%);
+	background: -o-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 69%,rgba(0,0,0,0.08) 100%);
+	background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 69%,rgba(0,0,0,0.08) 100%);
+	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 69%,rgba(0,0,0,0.08) 100%);
+}
+
+/* Bottom part */
+
+.fc-bottom {
+	width: 220px;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	opacity: 0;
+}
+
+.fc-bottom-bg {
+	background: #846aa7 url(../images/paper.png) repeat center center;
+	border-radius: 50%;
+	width: 300px;
+	height: 100%;
+}
+
+
+/* Overlays */
+
+.fc-overlay {
+	top: 0px;
+	left: 0px;
+	width: 300px;
+	height: 100%;
+	position: absolute;
+	border-radius: 50%;	
+}
+
+.fc-overlay-solid {
+	background: rgba(0,0,0,0.6);
+}
+
+.fc-overlay-reverse {
+	background: rgba(0,0,0,0);
+}
+
+.fc-overlay-left {
+	background: -moz-linear-gradient(left, transparent 27%, rgba(0,0,0,0.30) 80%);
+	background: -webkit-linear-gradient(left, transparent 27%, rgba(0,0,0,0.30) 80%);
+	background: -o-linear-gradient(left, transparent 27%, rgba(0,0,0,0.30) 80%);
+	background: -ms-linear-gradient(left, transparent 27%, rgba(0,0,0,0.30) 80%));
+	background: linear-gradient(to right, transparent 27%, rgba(0,0,0,0.30) 80%);
+	opacity: 0.5; 
+}
+
+.fc-overlay-right {
+	background: -moz-linear-gradient(right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.30) 100%);
+	background: -webkit-linear-gradient(right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.30) 100%);
+	background: -o-linear-gradient(right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.30) 100%);
+	background: -ms-linear-gradient(right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.30) 100%);
+	background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.30) 100%);
+	opacity: 0.5;
+}
+
+/* Flipping element */
+
+.fc-perspective {
+	width: 220px;
+	height: 300px;
+	position: relative;
+	
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-o-perspective: 1000px;
+	-ms-perspective: 1000px;
+	perspective: 1000px;
+}
+.fc-flip {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+
+	-webkit-transform-origin: 220px 0px;
+	-moz-transform-origin: 220px 0px;
+	-o-transform-origin: 220px 0px;
+	-ms-transform-origin: 220px 0px;
+	transform-origin: 220px 0px;
+}
+
+.fc-flip > div {
+	display: block;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+}
+
+.fc-flip .fc-back {
+	-webkit-transform: rotate3d(0,1,0,-180deg);
+	-moz-transform: rotate3d(0,1,0,-180deg);
+	-o-transform: rotate3d(0,1,0,-180deg);
+	-ms-transform: rotate3d(0,1,0,-180deg);
+	transform: rotate3d(0,1,0,-180deg);
+}
+
+.fc-flip .fc-inner {
+	border-radius: 50%;
+	width: 300px;
+	height: 100%;
+	position: absolute;
+	background: #846aa7 url(../images/paper.png) repeat top right;
+} 
+
+/* Content */
+
+.fc-content {
+	width: 220px;
+	padding: 20px;
+	text-align: right;
+	position: relative;
+	height: 100%;
+
+}
+
+.fc-content p {
+	font-size: 12px;
+	line-height: 22px;
+	font-family: "Montserrat", sans-serif;
+	text-shadow: 0 -1px 1px rgba(255,255,255,0.1);
+	color: #3b2954;
+	padding: 0 0 0 31px;
+}
+
+.fc-back .fc-content {
+	margin-left: 80px;
+}
+
+.fc-flip .fc-back .fc-inner {
+	margin-left: -80px;
+	background-color: #553c77;
+	box-shadow: inset 2px 0 3px rgba(0,0,0,0.1);
+}
+
+.fc-flip .fc-front h3,
+.fc-flip .fc-front p {
+	position: absolute;
+	text-align: right;
+	width: 180px;
+	text-shadow: 0 -1px 1px rgba(255,255,255,0.1);
+	color: #3b2954;
+}
+
+.fc-flip .fc-front h3,
+.feynman span {
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+	font-size: 17px;
+	letter-spacing: 1px;
+	font-weight: normal;
+}
+
+.fc-flip .fc-front h3 {
+	top: 30px;
+	left: 15px;
+}
+
+.feynman {
+	width: 255px;
+	height: 255px;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: -55px;
+	border-radius: 50%;
+	box-shadow: 2px 0 3px rgba(0,0,0,0.3);
+	margin-top: -127px;
+	background: transparent url(../images/feynman.png) no-repeat center right;
+}
+
+.feynman span {
+	text-align: center;
+	width: 100px;
+	height: 5px;
+	line-height: 30px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	bottom: 40px;
+	right: 80px;
+	font-size: 13px;
+	position: absolute;
+}
+
+.fc-flip .fc-front h3 span{
+	font-size: 40px;
+}
+
+.fc-flip .fc-front p,
+.fc-bottom-bg .fc-content span {
+	bottom: 50px;
+	left: 15px;
+	font-family: "Dancing Script", Georgia, serif;
+	font-weight: 700;
+	font-size: 22px;
+}
+
+.fc-bottom-bg .fc-content span {
+	font-size: 18px;
+	display: block;
+	color: #fff;
+	padding: 10px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+}
+
+.fc-bottom-bg .fc-content {
+	padding-top: 40px;
+}
+
+
+/* Transitions */
+
+.fc-flip .fc-back .fc-inner,
+.fc-overlay,
+.fc-handle,
+.fc-handle div,
+.fc-flip,
+.fc-bottom{
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+}
+.fc-bottom{
+	-webkit-transition-delay: 0.6s;
+	-moz-transition-delay: 0.6s;
+	-o-transition-delay: 0.6s;
+	-ms-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+}
+/* 3D: Let's not repeat this for each */
+.fc-flip,
+.fc-flip .fc-inner,
+.fc-handle {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.fc-flip,
+.fc-flip > div,
+.fc-flip .fc-inner,
+.fc-flip .fc-front h3,
+.fc-handle,
+.fc-handle div,
+.fc-overlay,
+.fc-flip .fc-front p,
+.fc-flip .fc-front span {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/* Hover states */
+
+.fc-wrapper.fc-wrapper-open .fc-handle-in {
+	width: 0px;
+}
+
+.fc-wrapper.fc-wrapper-open .fc-handle-in div {
+	height: 180px;
+}
+
+.fc-wrapper.fc-wrapper-open .fc-handle-out div {
+	height: 100px;
+}
+
+.fc-wrapper.fc-wrapper-open .fc-handle {
+	background-color: #513a70;
+}
+
+.fc-wrapper.fc-wrapper-open .fc-handle-pull {
+	width: 155px;
+	background: #775b9d;	
+}
+
+.fc-wrapper.fc-wrapper-open  .fc-flip .fc-back .fc-inner { 
+	background-color: #846aa7;
+}
+
+.fc-wrapper.fc-wrapper-open .fc-overlay {
+	opacity: 1;
+}
+
+.fc-wrapper.fc-wrapper-open .fc-overlay-solid {
+	background: rgba(0,0,0,0);
+}
+
+.fc-wrapper.fc-wrapper-open .fc-overlay-reverse {
+	background: rgba(0,0,0,0.4);
+}
+
+.fc-wrapper.fc-wrapper-open .fc-bottom{
+	opacity: 1;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+	
+}
+.fc-wrapper.fc-wrapper-open .fc-flip {
+	-webkit-transform: rotate3d(0,1,0,175deg);
+	-moz-transform: rotate3d(0,1,0,180deg);
+	-o-transform: rotate3d(0,1,0,175deg);
+	-ms-transform: rotate3d(0,1,0,175deg);
+	transform: rotate3d(0,1,0,175deg);
+}

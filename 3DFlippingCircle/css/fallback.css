@@ -1,0 +1,10 @@
+.fc-flip .fc-back{
+	display: none;
+}
+.fc-wrapper.fc-wrapper-open .fc-flip .fc-front{
+	display: none;
+}
+.fc-wrapper.fc-wrapper-open .fc-flip .fc-back{
+	display: block;
+	margin-left: 220px;
+}

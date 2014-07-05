@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>3D Flipping Circle with CSS3 and jQuery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="A realistic paper 3D flipping circle with CSS3 and jQuery" />
+        <meta name="keywords" content="3d, flip, paper, open, turn, shade, css3, jquery, realistic" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Montserrat|Dancing+Script:700' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script> 
+		<!--[if lte IE 10]><link rel="stylesheet" type="text/css" href="css/fallback.css" /><![endif]-->
+		<!--[if lte IE 8]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+    </head>
+    <body>
+        <div class="container">
+		
+			<!-- Codrops top bar -->
+            <div class="codrops-top">
+                <a href="http://tympanus.net/Development/CassettePlayer/">
+                    <strong>&laquo; Previous Demo: </strong>Old School Cassette Player
+                </a>
+                <span class="right">
+                    <a href="http://tympanus.net/codrops/2012/07/20/3d-flipping-circle-with-css3-and-jquery/">
+                        <strong>Back to the Codrops Article</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+			
+			<header>
+			
+				<h1>3D Flipping Circle <span>with CSS3 &amp; jQuery</span></h1>
+				<h2>Open the paper circle by clicking the right handle or swiping the circle.</h2>
+				
+				<div class="support-note"><!-- let's check browser support with modernizr -->
+					<!--span class="no-cssanimations">CSS animations are not supported in your browser</span-->
+					<span class="no-csstransforms">CSS transforms are not supported in your browser</span>
+					<span class="no-csstransforms3d">CSS 3D transforms are not supported in your browser</span>
+					<span class="no-csstransitions">CSS transitions are not supported in your browser</span>
+					<span class="note-ie">Sorry, only modern browsers.</span>
+				</div>
+				
+			</header>
+			
+			<section class="main">
+				<div class="click"></div>
+				<div id="fc-wrapper" class="fc-wrapper">
+					
+					<!-- right-most handle piece -->
+					<div class="fc-handle fc-handle-pull"></div>
+					
+					<div class="fc-perspective">
+						
+						<!-- right part overlay; get's darker -->
+						<div class="fc-overlay fc-overlay-reverse"></div>
+						
+						<!-- middle handle piece -->
+						<div class="fc-handle fc-handle-out"><div></div></div>
+						
+						<!-- inner bottom content part -->
+						<div class="fc-bottom">
+							<div class="fc-bottom-bg">
+								<div class="fc-content">
+									<p>I can live with doubt, and uncertainty, and not knowing. I think it's much more interesting to live not knowing than to have answers which might be wrong. <span>Richard Feynman</span></p>
+								</div>
+							</div>
+							<div class="fc-overlay fc-overlay-solid"></div>
+						</div><!-- //fc-bottom -->
+						
+						<!-- front and back of the flipping half -->
+						<div class="fc-flip">
+						
+							<div class="fc-front">
+							
+								<div class="fc-inner">
+								
+									<div class="fc-overlay fc-overlay-left"></div>
+									<!-- left-most part of handle -->
+									<div class="fc-handle fc-handle-in"><div></div></div>
+									
+									<div class="fc-content">
+										<h3><span>♞</span>Free revelations</h3>
+										<p>by Codrops</p>
+									</div>
+									
+								</div>
+								
+							</div><!-- //fc-front -->
+							
+							<div class="fc-back">
+							
+								<div class="fc-inner">
+								
+									<div class="fc-content">
+										<div class="feynman">
+											<span>1918 &ndash; 1988</span>
+										</div>
+									</div>
+									
+									<div class="fc-overlay fc-overlay-right"></div>
+									
+								</div>
+								
+							</div><!-- //fc-back -->				 
+							
+						</div><!-- //fc-flip -->				 
+						
+					</div><!-- //fc-perspective -->
+					
+				</div><!-- //fc-wrapper -->
+				
+			</section>
+			
+        </div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/hammer.js"></script>
+		<script type="text/javascript" src="js/jquery.hammer.js"></script>
+		<script type="text/javascript">
+			$(function() {
+			
+				var $wrapper= $( '#fc-wrapper' ),
+					$handle	= $wrapper.children( 'div.fc-handle-pull' );
+				
+				$handle.on( 'click', function( event ) {
+				
+					( $handle.data( 'opened' ) ) ? close() : open();
+				
+				} );
+				
+				$wrapper.hammer().bind( 'dragend', function( event ) {
+					switch( event.direction ) {
+						case 'right'	: open(); break;
+						case 'left'		: close(); break;
+					}
+				});
+				
+				function open() {
+						$wrapper.addClass( 'fc-wrapper-open' );
+					$handle.data( 'opened', true );
+				}
+				
+				function close() {
+						$wrapper.removeClass( 'fc-wrapper-open' );
+					$handle.data( 'opened', false );
+					}
+			
+			} );
+		</script>
+    </body>
+</html>
