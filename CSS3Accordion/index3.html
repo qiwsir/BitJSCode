@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Accordion with CSS3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Accordion with CSS3" />
+        <meta name="keywords" content="accordion, css3, sibling selector, radio buttons, input, pseudo class" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/modernizr.custom.29473.js"></script>
+    </head>
+    <body>
+        <div class="container">
+			<!-- Codrops top bar -->
+            <div class="codrops-top">
+                <a href="http://tympanus.net/codrops/2012/02/06/3d-gallery-with-css3-and-jquery/">
+                    <strong>&laquo; Previous Demo: </strong>3D Gallery with CSS3 and jQuery
+                </a>
+                <span class="right">
+					<a href="http://slipsum.com">Placeholder text by SAMUEL L. IPSUM</a>
+                    <a href=" http://tympanus.net/codrops/2012/02/20/accordion-with-css3/">
+                        <strong>Back to the Codrops Article</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+			<header>
+				<h1>Accordion <span>with CSS3</span></h1>
+				<h2>A simple content accordion using the adjacent and general sibling combinator and the :checked pseudo-class</h2>
+				<p class="codrops-demos">
+					<a href="index.html">Checkboxes</a>
+					<a href="index2.html">Radio Buttons</a>
+					<a class="current-demo" href="index3.html">Default Open (Checkboxes)</a>
+				</p>
+			</header>
+			<section class="ac-container">
+				<div>
+					<input id="ac-1" name="accordion-1" type="checkbox" />
+					<label for="ac-1">About us</label>
+					<article class="ac-small">
+						<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>
+					</article>
+				</div>
+				<div>
+					<input id="ac-2" name="accordion-1" type="checkbox" checked />
+					<label for="ac-2">How we work</label>
+					<article class="ac-medium">
+						<p>Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price. </p>
+					</article>
+				</div>
+				<div>
+					<input id="ac-3" name="accordion-1" type="checkbox" />
+					<label for="ac-3">References</label>
+					<article class="ac-large">
+						<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. </p>
+					</article>
+				</div>
+				<div>
+					<input id="ac-4" name="accordion-1" type="checkbox" />
+					<label for="ac-4">Contact us</label>
+					<article class="ac-large">
+						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+					</article>
+				</div>
+			</section>
+        </div>
+    </body>
+</html>
